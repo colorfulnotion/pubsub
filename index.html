@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awesome-web3 PubSub Demonstration</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    
+    h1 {
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    h4 {
+        margin-top: 20px;
+    }
+    
+    .param {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    
+    #messages {
+        width: 100%;
+        height: 200px;
+        padding: 10px;
+        box-sizing: border-box;
+        resize: none;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Awesome-web3 PubSub ETH Denver Demonstration</h1>
+
+  <p>This page shows a live <B>Subscription</B> to a <B>Topic</B> (`ethereum_token_transfers_raw`) about Ethereum USDT transfers.  The webpage opens a websocket to
+  <code>ws://explorer.colorfulnotion.com:1234</code> which fetches the subscription data.</p>
+  
+  <p>If you'd like #BUIDL this PubSub product with <a href="https://x.com/colorfulnotion">@colorfulnotion</a> (we supply crypto-polkadot to BigQuery),
+   find us at ETHDenver by joining <a href="https://t.me/awesomeweb3">@awesomeweb3 on Telegram</a>.</p>
+
+  <h4>Pubsub Web Socket:</h4>
+  <input class="param" value="ws://explorer.colorfulnotion.com:1234">
+
+  <h4>Topic:</h4> 
+  <input class="param" value="projects/awesome-web3/topics/ethereum_token_transfers_raw">
+  (see <a href="https://github.com/colorfulnotion/pubsub?tab=readme-ov-file#1-setup-a-subscription-to-a-topic">Awesome-web3 pubsub</a> docs for full list of Ethereum topics)
+  
+  <h4>Subscription:</h4>
+  <input class="param" value="projects/awesome-web3/subscriptions/ethereum_token_transfers_usdt">
+  (see <a href="https://github.com/colorfulnotion/pubsub?tab=readme-ov-file#1-setup-a-subscription-to-a-topic">Awesome-web3 pubsub</a> docs for full list of Ethereum subscriptions, or create your own and fork the repo)
+
+  <h4>Number of Messages:</h4>
+  <input id="numMessages" class="param" value="0"/>
+  (increases with each block)
+    
+  <h4>Last Message from Subscription:</h4>
+  <textarea id="messages"></textarea>
+
+  
+  <script>
+    let numMessages = 0;
+    const messages = document.getElementById('messages');
+    const numberMessages = document.getElementById('numMessages');
+    
+    // Open a WebSocket connection to the server
+    const ws = new WebSocket('ws://explorer.colorfulnotion.com:1234');
+    
+    // Event listener for when the connection is established
+    ws.onopen = function(event) {
+        console.log('WebSocket connection established');
+    };
+    
+    // Event listener for incoming messages
+    ws.onmessage = function(event) {
+        const message = event.data;
+        console.log('Received message:', message);
+        // Display the message on the web page and the numMessages
+        messages.value = `${message}`;
+        numberMessages.value = ++numMessages;
+    };
+    
+    // Event listener for errors
+    ws.onerror = function(error) {
+        console.error('WebSocket error:', error);
+    };
+    
+    // Event listener for closing the connection
+    ws.onclose = function(event) {
+        console.log('WebSocket connection closed');
+    };
+  </script>
+
+  <a href="https://github.com/colorfulnotion/pubsub">100% Open Source - MIT License</a>
+
+</body>
+</html>
