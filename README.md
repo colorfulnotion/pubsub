@@ -1,6 +1,12 @@
 # Getting Started with GC Web3 PubSub
 
-GCWeb3 PubSub makes consuming and processing blockchain events easy.  All you need is to 1. setup a subscription to a *topic* with a filter on *attributes*, and listen for fully decoded events.    No need for nodes, RPCs, APIs or any kind of complex decoding!  
+GCWeb3 PubSub makes consuming and processing blockchain events easy.  All you need is to 
+1. setup a subscription to a *topic* with a filter on *attributes*, and
+2. listen for fully decoded events.
+
+No need for nodes, RPCs, APIs or any kind of complex decoding!  
+
+Below is basic documentation to get started on the available topics, the attributes for each topic, and some sample filters on those attributes.
 
 This is currently in PoC but is available to `allAuthenticated` users.
 
@@ -10,7 +16,7 @@ This is currently in PoC but is available to `allAuthenticated` users.
 All topics are in `awesome-web3` .  Chain support is limited to Ethereum
 
 * [ethereum_logs_raw](https://console.cloud.google.com/cloudpubsub/topic/detail/ethereum_logs_raw?hl=en&project=awesome-web3)
-*  [ethereum_token_transfers_raw](https://console.cloud.google.com/cloudpubsub/topic/detail/ethereum_token_transfers_raw?hl=en&project=awesome-web3)
+* [ethereum_token_transfers_raw](https://console.cloud.google.com/cloudpubsub/topic/detail/ethereum_token_transfers_raw?hl=en&project=awesome-web3)
 * [ethereum_traces_raw](https://console.cloud.google.com/cloudpubsub/topic/detail/ethereum_traces_raw?hl=en&project=awesome-web3)
 * [ethereum_transactions_raw](https://console.cloud.google.com/cloudpubsub/topic/detail/ethereum_transactions_raw?hl=en&project=awesome-web3)
 
