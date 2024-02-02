@@ -149,7 +149,7 @@ Supported Filter Attributes:
 |--------------------|-----------------------------------------------------|
 | insert_id          | Uniquely identifying this message (TODO: requires de-duplication) |
 | chain              | Identifying the chain                                |
-| msg_type           | Message type                                        |
+| msg_type           | Message type (same as the topic name)                |
 | timestamp          | Timestamp where the message is generated (might be different than the actual publish time) |
 | finalized          | Indicates if the message is finalized (or not). Currently, only unfinalized messages are published |
 | block_hash         | Block hash identifying where the message belongs to |
