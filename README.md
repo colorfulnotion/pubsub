@@ -23,7 +23,7 @@ All topics are in `awesome-web3`.  Chain support is limited to Ethereum currentl
 
 ### 2.  Define a filter
 
-Depending on which topic you select, you can [filter on any of the attributes](https://cloud.google.com/pubsub/docs/subscription-message-filter).   Note that filters are up to 256 characters only.
+Depending on which topic you select, you can [filter on any of the attributes](https://cloud.google.com/pubsub/docs/subscription-message-filter).   Note that filters are up to 256 characters only so multiple subscriptions might be required for complex filters.
 
 For example, to monitor all USDT transfers, use the following filter on `ethereum_token_transfers_raw` topic:
 
