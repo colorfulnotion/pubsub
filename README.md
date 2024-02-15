@@ -16,6 +16,8 @@ This is currently in PoC but is available to `allAuthenticated` users.
 
 All topics are in `awesome-web3`.  Chain support is limited to Ethereum currently.
 
+[NM: These deep links don't work. I suggest removing the href and just listing the full path to the topic that developers will place in the topic field in the subscriptions UI]
+
 * [ethereum_logs_raw](https://console.cloud.google.com/cloudpubsub/topic/detail/ethereum_logs_raw?hl=en&project=awesome-web3)
 * [ethereum_transactions_raw](https://console.cloud.google.com/cloudpubsub/topic/detail/ethereum_transactions_raw?hl=en&project=awesome-web3)
 * [ethereum_traces_raw](https://console.cloud.google.com/cloudpubsub/topic/detail/ethereum_traces_raw?hl=en&project=awesome-web3)
