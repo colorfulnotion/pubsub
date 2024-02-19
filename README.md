@@ -11,7 +11,7 @@ This is currently in PoC but is available to `allAuthenticated` users.
 
 Below is basic documentation to get started on the available topics, the attributes for each topic, and some sample filters on those attributes.
 
-If you would like to contribute your topics or add your useful filters to this repo, join us on Telegram at [t.me/awesomeweb3](t.me/awesomeweb3).
+If you would like to contribute your topics or add your useful filters to this repo, join us on Telegram at [https://t.me/awesomeweb3](https://t.me/awesomeweb3).
 
 ## Quick Start Guide
 
