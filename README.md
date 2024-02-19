@@ -1,14 +1,17 @@
-# GC Web3 PubSub
+# Awesome-Web3 PubSub
 
-GCWeb3 PubSub makes consuming and processing blockchain events easy.  All you need is to 
+Awesome-web3 PubSub makes consuming and processing blockchain events easy.  All you need is to 
 1. setup a subscription to a *topic* with a filter on *attributes*, and
 2. listen for fully decoded events.
 
-No need for nodes, RPCs, APIs or any kind of complex decoding!  
+No need for nodes, RPCs, APIs or any kind of complex decoding!   
+
+All resources for `awesome-web3` are graciously provided by Google Cloud Web3.    
+This is currently in PoC but is available to `allAuthenticated` users.  
 
 Below is basic documentation to get started on the available topics, the attributes for each topic, and some sample filters on those attributes.
 
-This is currently in PoC but is available to `allAuthenticated` users.
+If you would like to contribute your topics or add your useful filters to this repo, join us on Telegram at [t.me/awesomeweb3](t.me/awesomeweb3).
 
 ## Quick Start Guide
 
