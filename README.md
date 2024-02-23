@@ -15,16 +15,19 @@ If you would like to contribute your topics or add your useful filters to this r
 
 ## Quick Start Guide
 
-### 1. Setup a subscription to a topic:
+### 1. Setup a subscription to a `awesome-web3` topic.
 
-All topics are in `awesome-web3`.  Chain support is limited to Ethereum currently.
+Here are list of full paths to 4 Ethereum PubSub topics: 
 
-[NM: These deep links don't work. I suggest removing the href and just listing the full path to the topic that developers will place in the topic field in the subscriptions UI]
+* `projects/awesome-web3/topics/ethereum_blocks_raw`
+* `projects/awesome-web3/topics/ethereum_transactions_raw`
+* `projects/awesome-web3/topics/ethereum_traces_raw`
+* `projects/awesome-web3/topics/ethereum_token_transfers_raw`
 
-* [ethereum_logs_raw](https://console.cloud.google.com/cloudpubsub/topic/detail/ethereum_logs_raw?hl=en&project=awesome-web3)
-* [ethereum_transactions_raw](https://console.cloud.google.com/cloudpubsub/topic/detail/ethereum_transactions_raw?hl=en&project=awesome-web3)
-* [ethereum_traces_raw](https://console.cloud.google.com/cloudpubsub/topic/detail/ethereum_traces_raw?hl=en&project=awesome-web3)
-* [ethereum_token_transfers_raw](https://console.cloud.google.com/cloudpubsub/topic/detail/ethereum_token_transfers_raw?hl=en&project=awesome-web3)
+This is the full string that you can put the topic field in the subscriptions UI.
+
+Chain support is limited to Ethereum currently.
+
 
 ### 2.  Define a filter
 
@@ -36,10 +39,18 @@ For example, to monitor all USDT transfers, use the following filter on `ethereu
 attributes.symbol = "USDT"  AND attributes.token_address = "0xdac17f958d2ee523a2206206994597c13d831ec7"
 ```
 
-You can set up a subscription `ethereumusdt`.
+You can set up a subscription `ethereumusdt`.  The `projects/awesome-web3/subscriptions/ethereum_token_transfers_usdt` subscription has this exact filter.
 
-See below for message schemas and filter attributes for all 4 topics.  
+Here are some useful subscriptions: 
 
+```
+projects/awesome-web3/subscriptions/ethereum_token_transfers_usdt
+projects/awesome-web3/subscriptions/ethereum_logs_tokenexchange
+projects/awesome-web3/subscriptions/ethereum_logs_raw_uniswapv2
+projects/awesome-web3/subscriptions/ethereum_log_nft_transfer
+```
+
+See below for message schemas and filter attributes for all 4 topics. 
 
 ### Sample Node.js Code
 
